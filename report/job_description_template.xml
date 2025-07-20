@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="job_records">
+            <div class="container">
+                <div class="h4 mb-4 pb-3 text-center border-bottom ">
+                    شرح وظایف کارکنان شرکت پتروآسماری بین الملل
+                </div>
+                <div class="row mx-0 mb-3">
+                    <div class="col-6 row mx-0 border">
+                        <div class="col-3 border">Job Name:</div>
+                        <div class="col border" t-esc="o.name"></div>
+                    </div>
+                    <div class="col-6 row mx-0 border">
+                        <div class="col-3 border">Department:</div>
+                        <div t-if="o.department_id" class="col border" t-esc="o.department_id.name"></div>
+                    </div>
+
+
+                </div>
+                <div class="h6">
+                    Job description
+                </div>
+
+                <t t-foreach="o.job_ids" t-as="job_id">
+                    <div class="" t-esc="job_id.name"></div>
+
+                </t>
+
+
+
+            </div>
+        </template>
+        <template id="job_description">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.basic_layout" t-lang="lang">
+                    <!--                    <t t-call="sd_hr_resume.resume_header"/>-->
+                    <div class="page1">
+<!--                        <t t-set="lang" t-value="o.env.context.get('lang')"/>-->
+                        <t t-set="lang" t-value="'en_US'"/>
+                        <t t-call="sd_hr_job.job_records" t-lang="lang"/>
+                    </div>
+                </t>
+
+            </t>
+        </template>
+    </data>
+</odoo>
