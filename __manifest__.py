@@ -11,7 +11,7 @@
     'installable': True,
     'auto_install': False,
     'application': False,
-    'depends': ['hr',],
+    'depends': ['base', 'web', 'hr',],
     'data': [
         'security/ir.model.access.csv',
         'report/job_description_template.xml',

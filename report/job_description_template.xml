@@ -7,13 +7,17 @@
                     شرح وظایف کارکنان شرکت پتروآسماری بین الملل
                 </div>
                 <div class="row mx-0 mb-3">
-                    <div class="col-6 row mx-0 border">
-                        <div class="col-3 border">Job Name:</div>
-                        <div class="col border" t-esc="o.name"></div>
+                    <div class="col-12 row mx-0 border">
+                        <div class="col-3 border">Employee Name:</div>
+                        <div class="col-9 border" t-esc="o.name"></div>
                     </div>
-                    <div class="col-6 row mx-0 border">
+                    <div class="col-12 row mx-0 border">
                         <div class="col-3 border">Department:</div>
-                        <div t-if="o.department_id" class="col border" t-esc="o.department_id.name"></div>
+                        <div t-if="o.department_id" class="col-9 border" t-esc="o.department_id.name"></div>
+                    </div>
+                    <div class="col-12 row mx-0 border">
+                        <div class="col-3 border">Job Position:</div>
+                        <div t-if="o.job_id" class="col-9 border" t-esc="o.job_id.name"></div>
                     </div>
 
 
@@ -22,7 +26,7 @@
                     Job description
                 </div>
 
-                <t t-foreach="o.job_ids" t-as="job_id">
+                <t t-foreach="o.job_id.job_ids" t-as="job_id">
                     <div class="" t-esc="job_id.name"></div>
 
                 </t>
