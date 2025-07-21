@@ -2,50 +2,125 @@
 <odoo>
     <data>
         <template id="job_records">
-            <div class="container">
-                <div class="h4 mb-4 pb-3 text-center border-bottom ">
-                    شرح وظایف کارکنان شرکت پتروآسماری بین الملل
-                </div>
-                <div class="row mx-0 mb-3">
-                    <div class="col-12 row mx-0 border">
-                        <div class="col-3 border">Employee Name:</div>
-                        <div class="col-9 border" t-esc="o.name"></div>
+            <!--            <div class="container1">-->
+            <div class="header">
+                    <style type="text/css">
+
+                        .header-content {
+                            font-family: 'IRANSansFN', sans-serif;
+                        }
+                    </style>
+
+                <div class="h4 pb-3  ">
+                    <div class="row mx-0 p-1 border1 border-info">
+                        <div class="col-5 px-1 py-3 text-end border1">شرح وظایف کارکنان شرکت</div>
+                        <div class="col-5 px-1 py-3 border1" t-esc="o.company_id.name"></div>
+                        <div class="col-2 px-1 border1 border-danger" style="">
+                            <img t-if="o.company_id"
+                                 t-attf-src="/web/image/res.company/{{o.company_id.id}}/logo_web"
+                                 alt="Company Logo" class="w-100"/>
+                        </div>
                     </div>
-                    <div class="col-12 row mx-0 border">
-                        <div class="col-3 border">Department:</div>
-                        <div t-if="o.department_id" class="col-9 border" t-esc="o.department_id.name"></div>
-                    </div>
-                    <div class="col-12 row mx-0 border">
-                        <div class="col-3 border">Job Position:</div>
-                        <div t-if="o.job_id" class="col-9 border" t-esc="o.job_id.name"></div>
-                    </div>
-
-
                 </div>
-                <div class="h6">
-                    Job description
+                <div class="my-3 border-bottom border-2 border-dark"></div>
+                <div class="row mb-2">
+                    <div class="col-6 row mx-0 mb-2 p-0 ">
+                        <div class="col-4 ">Employee Name:</div>
+                        <div class="col-8 " t-esc="o.name"></div>
+                    </div>
+                    <div class="col-6 row mx-0 mb-2 p-0 ">
+                        <div class="col-4 ">Employee ID:</div>
+                        <div t-if="o.barcode" class="col-8 " t-esc="o.barcode"></div>
+                    </div>
                 </div>
 
-                <t t-foreach="o.job_id.job_ids" t-as="job_id">
-                    <div class="" t-esc="job_id.name"></div>
+                <div class="row mb-2">
+                    <div class="col-6 row mx-0 mb-2 p-0 ">
+                        <div class="col-4 ">Department:</div>
+                        <div t-if="o.department_id" class="col-8 " t-esc="o.department_id.name"></div>
+                    </div>
+                    <div class="col-6 row mx-0 p-0 ">
+                        <div class="col-4 ">Job Position:</div>
+                        <div t-if="o.job_id" class="col-8 " t-esc="o.job_id.name"></div>
+                    </div>
 
-                </t>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-6 row mx-0 mb-2 p-0 ">
+                        <div class="col-4 ">Contract No:</div>
+                        <div t-if="o.department_id" class="col-8 " t-esc="employees[int(o.id)]"></div>
+                    </div>
+                    <!--                    <div class="col-6 row mx-0 p-0 ">-->
+                    <!--                        <div class="col-4 ">Job Position:</div>-->
+                    <!--                        <div t-if="o.job_id" class="col-8 " t-esc="o.job_id.name"></div>-->
+                    <!--                    </div>-->
+
+                </div>
 
 
-
+                <div class="my-3 border-bottom border-2 border-dark"></div>
             </div>
+            <div class="article1">
+                <div class="p-3">
+                    <div class="h6 ">
+                        Job description
+                    </div>
+                    <t t-set="index" t-value="1"></t>
+                        <t t-foreach="o.job_id.job_ids" t-as="job_id">
+                            <div class="row row-cols-auto py-5 ">
+                                <div class="col-1" t-esc="str(index) + ' - '"></div>
+                                <div class="col-11 " t-esc="job_id.name"></div>
+                            </div>
+                            <t t-set="index" t-value="index + 1"></t>
+                        </t>
+                </div>
+            </div>
+            <div class="footer">
+                Page
+                <span class="page"/>
+                of
+                <span class="topage"/>
+            </div>
+            <!--            </div>-->
         </template>
+
+        <template id="job_description3">
+    <t t-call="web.basic_layout">
+        <div class="header">Header Content</div>
+        <div class="article1">
+            <strong>Name:</strong> <span t-esc="'doc.name'"/>
+            <br/>
+            <strong>Description:</strong> <span t-esc="'doc.description'"/>
+        </div>
+    </t>
+</template>
+
+        <template id="job_description2">
+            <t t-call="web.basic_layout">
+                <div class="header">aaaaaaaaaaaaaaaa</div>
+                <div class="article">
+<!--                    <t t-foreach="docs" t-as="o">-->
+                        <div class="page">
+                            <!-- Your content per doc -->
+                            <strong>Job:</strong>
+                            <span t-esc="'o.name'"/>
+                            <br/>
+                            <strong>Description:</strong>
+                            <span t-esc="'o.id'"/>
+                        </div>
+<!--                    </t>-->
+                </div>
+            </t>
+        </template>
+
+
         <template id="job_description">
             <t t-foreach="docs" t-as="o">
+                <t t-set="lang" t-value="o.env.context.get('lang')"/>
                 <t t-call="web.basic_layout" t-lang="lang">
-                    <!--                    <t t-call="sd_hr_resume.resume_header"/>-->
-                    <div class="page1">
-<!--                        <t t-set="lang" t-value="o.env.context.get('lang')"/>-->
-                        <t t-set="lang" t-value="'en_US'"/>
-                        <t t-call="sd_hr_job.job_records" t-lang="lang"/>
-                    </div>
+                    <t t-call="sd_hr_job.job_records" t-lang="lang"/>
                 </t>
-
             </t>
         </template>
     </data>
