@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sd_hr_job
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-21 05:33+0000\n"
+"PO-Revision-Date: 2025-07-21 09:03+0330\n"
+"Last-Translator: Arash Homayounfar <homayounfar@msn.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fa\n"
+"X-Generator: Poedit 2.2\n"
+
+#. module: sd_hr_job
+#: model:ir.actions.report,print_report_name:sd_hr_job.job_description_report
+msgid "'Job-%s' % object.name "
+msgstr ""
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Company Logo"
+msgstr ""
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Contract No:"
+msgstr "شماره قرارداد:"
+
+#. module: sd_hr_job
+#: model:ir.model.fields,help:sd_hr_job.field_hr_job__job_count
+msgid "Count of jobs."
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__department_id
+msgid "Department"
+msgstr "واحد سازمانی"
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Department:"
+msgstr "واحد سازمانی:"
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Employee ID:"
+msgstr "کد پرسنلی:"
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Employee Name:"
+msgstr "نام کارمند:"
+
+#. module: sd_hr_job
+#: model:ir.model,name:sd_hr_job.model_report_sd_hr_job_job_description
+msgid "HR Job Description"
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__id
+msgid "ID"
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__job_id
+msgid "Job"
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.actions.act_window,name:sd_hr_job.job_description_action
+#: model:ir.actions.report,name:sd_hr_job.job_description_report
+#: model:ir.ui.menu,name:sd_hr_job.sd_job_description
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Job Description"
+msgstr "شرح وظایف"
+
+#. module: sd_hr_job
+#: model:ir.model,name:sd_hr_job.model_hr_job
+msgid "Job Position"
+msgstr "موقعیت شغلی"
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Job Position:"
+msgstr "موقعیت شغلی:"
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Job description"
+msgstr "شرح وظایف"
+
+#. module: sd_hr_job
+#: model:ir.model,name:sd_hr_job.model_sd_hr_job_items
+msgid "Job description items"
+msgstr ""
+
+#. module: sd_hr_job
+#. odoo-python
+#: code:addons/sd_hr_job/models/hr_job.py:0
+#: model:ir.model.fields,field_description:sd_hr_job.field_hr_job__job_ids
+#, python-format
+msgid "Jobs"
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_sd_hr_job_items__name
+msgid "Name"
+msgstr "نام"
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Page"
+msgstr "صفحه"
+
+#. module: sd_hr_job
+#: model:ir.model.fields,field_description:sd_hr_job.field_hr_job__job_count
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.view_hr_job_form_inherit
+msgid "jobs"
+msgstr ""
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "of"
+msgstr "از"
