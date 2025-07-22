@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-21 05:33+0000\n"
-"PO-Revision-Date: 2025-07-21 09:03+0330\n"
+"POT-Creation-Date: 2025-07-22 12:23+0000\n"
+"PO-Revision-Date: 2025-07-22 15:54+0330\n"
 "Last-Translator: Arash Homayounfar <homayounfar@msn.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,6 +71,11 @@ msgstr "کد پرسنلی:"
 #: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
 msgid "Employee Name:"
 msgstr "نام کارمند:"
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "End Date:"
+msgstr "تاریخ پایان:"
 
 #. module: sd_hr_job
 #: model:ir.model,name:sd_hr_job.model_report_sd_hr_job_job_description
@@ -142,6 +147,11 @@ msgstr "نام"
 #: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
 msgid "Page"
 msgstr "صفحه"
+
+#. module: sd_hr_job
+#: model_terms:ir.ui.view,arch_db:sd_hr_job.job_records
+msgid "Start Date:"
+msgstr "تاریخ شروع:"
 
 #. module: sd_hr_job
 #: model:ir.model.fields,field_description:sd_hr_job.field_hr_job__job_count

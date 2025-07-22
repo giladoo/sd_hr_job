@@ -17,11 +17,14 @@ class SdHrJobJobDescriptionReport(models.AbstractModel):
     @api.model
     def _get_report_values(self, docids=None, data=None):
         docs = self.env['hr.employee'].browse(docids)
+        lang = self.env.context.get('lang', 'en_US')
         employees = {}
         for doc in docs:
-            contract = self.env['hr.contract'].search([('employee_id', '=', doc.id), ('state', '=', 'open')], limit=1)
-            contract_no = contract.name if contract else ''
-            employees[doc.id] = contract_no
+            contract = self.env['hr.contract'].sudo().search([('employee_id', '=', doc.id), ('state', '=', 'open')], limit=1)
+            employees[doc.id] = ['', '', '']
+            employees[doc.id][0] = contract.name if contract else ''
+            employees[doc.id][1] = (jdatejs(contract.date_start, '%Y/%m/%d')  if lang == 'fa_IR' else contract.date_start.strftime('%Y-%m-%d') ) if contract else ''
+            employees[doc.id][2] = (jdatejs(contract.date_end, '%Y/%m/%d')  if lang == 'fa_IR' else contract.date_end.strftime('%Y-%m-%d') ) if contract else ''
         return {
             'doc_ids': docids,
             'docs': docs,

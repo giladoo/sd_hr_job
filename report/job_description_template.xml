@@ -3,90 +3,96 @@
     <data>
         <template id="job_records">
             <div class="container">
-            <div class="header">
-                <div class=" p-3   ">
-                    <div class="row mx-0  ">
-                        <div class="col-8 py-3 text-center ">
-                            <div class="h4 px-1 ">Job Description</div>
-
-                        </div>
-                        <div class="col-4 px-1 text-center  " style="">
-                            <div class="mx-auto"  style="max-width: 100px;">
-                                <img t-if="o.company_id"
-                                     t-attf-src="/web/image/res.company/{{o.company_id.id}}/logo_web"
-                                     alt="Company Logo" class="w-100 mx-auto"/>
-
+                <div class="header">
+                    <div class=" p-3   ">
+                        <div class="row mx-0  ">
+                            <div class="col-8 py-3 text-center">
+                                <div class="h4 px-1 ">Job Description</div>
                             </div>
-                            <div class=" px-1  " t-esc="o.company_id.name"></div>
+                            <div class="col-4 px-1 text-center" style="">
+                                <div class="mx-auto" style="max-width: 100px;">
+                                    <img t-if="o.company_id"
+                                         t-attf-src="/web/image/res.company/{{o.company_id.id}}/logo_web"
+                                         alt="Company Logo" class="w-100 mx-auto"/>
+                                </div>
+                                <div class=" px-1  " t-esc="o.company_id.name"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 p-3 border border-2 border-dark " style="border-radius: 12px;">
+                        <div class="row mb-2">
+                            <div class="col-6 row mx-0 mb-2 p-0">
+                                <div class="col-4 ">Employee Name:</div>
+                                <div class="col-8 " t-esc="o.name"></div>
+                            </div>
+                            <div class="col-6 row mx-0 mb-2 p-0 ">
+                                <div class="col-4 ">Employee ID:</div>
+                                <div t-if="o.barcode" class="col-8 " t-esc="o.barcode"></div>
+                            </div>
+                        </div>
 
+                        <div class="row mb-2">
+                            <div class="col-6 row mx-0 mb-2 p-0">
+                                <div class="col-4 ">Department:</div>
+                                <div t-if="o.department_id" class="col-8 " t-esc="o.department_id.name"></div>
+                            </div>
+                            <div class="col-6 row mx-0 p-0 ">
+                                <div class="col-4 ">Job Position:</div>
+                                <div t-if="o.job_id" class="col-8 " t-esc="o.job_id.name"></div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-6 row mx-0 p-0">
+                                <div class="col-4">Contract No:</div>
+                                <div t-if="o.department_id" class="col-8 " t-esc="employees[int(o.id)][0]"></div>
+                            </div>
+                            <!--                    <div class="col-6 row mx-0 p-0 ">-->
+                            <!--                        <div class="col-4 ">Job Position:</div>-->
+                            <!--                        <div t-if="o.job_id" class="col-8 " t-esc="o.job_id.name"></div>-->
+                            <!--                    </div>-->
+
+                        </div>
+                        <div class="row ">
+                            <div class="col-6 row mx-0 p-0">
+                                <div class="col-4">Start Date:</div>
+                                <div t-if="o.department_id" class="col-8 " t-esc="employees[int(o.id)][1]"></div>
+                            </div>
+                            <div class="col-6 row mx-0 p-0">
+                                <div class="col-4">End Date:</div>
+                                <div t-if="o.department_id" class="col-8 " t-esc="employees[int(o.id)][2]"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="my-3 p-3 border border-2 border-dark " style="border-radius: 10px;">
 
-                <div class="row mb-2">
-                    <div class="col-6 row mx-0 mb-2 p-0 ">
-                        <div class="col-4 ">Employee Name:</div>
-                        <div class="col-8 " t-esc="o.name"></div>
-                    </div>
-                    <div class="col-6 row mx-0 mb-2 p-0 ">
-                        <div class="col-4 ">Employee ID:</div>
-                        <div t-if="o.barcode" class="col-8 " t-esc="o.barcode"></div>
-                    </div>
-                </div>
-
-                <div class="row mb-2">
-                    <div class="col-6 row mx-0 mb-2 p-0 ">
-                        <div class="col-4 ">Department:</div>
-                        <div t-if="o.department_id" class="col-8 " t-esc="o.department_id.name"></div>
-                    </div>
-                    <div class="col-6 row mx-0 p-0 ">
-                        <div class="col-4 ">Job Position:</div>
-                        <div t-if="o.job_id" class="col-8 " t-esc="o.job_id.name"></div>
-                    </div>
-
-                </div>
-
-                <div class="row ">
-                    <div class="col-6 row mx-0  p-0 ">
-                        <div class="col-4 ">Contract No:</div>
-                        <div t-if="o.department_id" class="col-8 " t-esc="employees[int(o.id)]"></div>
-                    </div>
-                    <!--                    <div class="col-6 row mx-0 p-0 ">-->
-                    <!--                        <div class="col-4 ">Job Position:</div>-->
-                    <!--                        <div t-if="o.job_id" class="col-8 " t-esc="o.job_id.name"></div>-->
-                    <!--                    </div>-->
-
-                </div>
-                </div>
-
-
-<!--                <div class="my-3 border-bottom border-2 border-dark"></div>-->
-            </div>
-            <div class="article1">
-                <div class="p-3">
-                    <div class="h6 ">
-                        Job description
-                    </div>
-                    <t t-set="index" t-value="1"></t>
-                    <t t-foreach="o.job_id.job_ids" t-as="job_id">
-                        <div class="row row-cols-auto py-5 ">
-                            <div class="col-1" t-esc="str(index) + ' - '"></div>
-                            <div class="col-11 " t-esc="job_id.name"></div>
+                <div class="article1">
+                    <div class="p-3">
+                        <div class="h6 ">
+                            Job description
                         </div>
-                        <t t-set="index" t-value="index + 1"></t>
-                    </t>
-                </div>
-            </div>
-            <div class="footer py-2 text-center border-2 border-top border-dark">
-                <div class="row row-cols-auto text-center">
-                    <div class="col px-1 ">Page</div>
-                    <span class="page"/>
-                    <div class="col px-1 ">of</div>
-                    <span class="topage"/>
+                        <t t-set="index" t-value="1"></t>
+                            <t t-foreach="o.job_id.job_ids" t-as="job_id">
+                                <div class="row row-cols-auto px-3 py-2 ">
+                                    <div class="col px-2" t-esc="str(index) + ' - '"></div>
+                                    <div class="col-11 " t-esc="job_id.name"></div>
+                                </div>
+                                <t t-set="index" t-value="index + 1"></t>
+                            </t>
 
+                    </div>
                 </div>
-            </div>
+
+                <div class="footer py-2 border-2 border-top border-dark">
+                    <div class="w-25 mx-auto">
+                        <div class="row row-cols-auto  w-50 mx-auto ">
+                            <div class="col px-2 py-1 ">Page</div>
+                            <span class="page "/>
+                            <div class="col px-2 py-1 ">of</div>
+                            <span class="topage"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </template>
 
