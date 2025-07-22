@@ -21,8 +21,8 @@
         <field name="name">Job Description</field>
         <field name="model">hr.employee</field>
 <!--        <field name="report_type">xlsx</field>-->
-                <field name="report_type">qweb-html</field>
-<!--                <field name="report_type">qweb-pdf</field>-->
+<!--                <field name="report_type">qweb-html</field>-->
+                <field name="report_type">qweb-pdf</field>
         <field name="report_name">sd_hr_job.job_description</field>
         <field name="report_file">sd_hr_job.job_description</field>
         <field name="print_report_name">'Job-%s' % object.name </field>
