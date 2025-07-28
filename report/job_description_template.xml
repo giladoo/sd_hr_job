@@ -2,8 +2,8 @@
 <odoo>
     <data>
         <template id="job_records">
-            <div class="container"  style="line-height: 1.9;" >
-                <div class="header">
+            <div class="container1  "  style="line-height: 1.9;" >
+                <div class="header " style="line-height: 1.1;">
                     <div class=" p-3   ">
                         <div class="row mx-0  ">
                             <div class="col-8 py-3 text-center">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
 
-                <div class="article1">
+                <div class="div my-3 border border-2 border-dark" style="border-radius: 12px;">
                     <div class="p-3">
                         <div class="h6 ">
                             Job description
@@ -83,7 +83,7 @@
                     </div>
                 </div>
 
-                <div class="footer py-2 border-2 border-top border-dark">
+                <div class="footer mt-5 py-2 border-2 border-top border-dark">
                     <div class=" mt-3 mb-2" t-esc="o.name"
                          ></div>
                     <div class="mb-3" >Sing</div>
