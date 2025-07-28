@@ -73,7 +73,7 @@
                         </div>
                         <t t-set="index" t-value="1"></t>
                             <t t-foreach="o.job_id.job_ids" t-as="job_id">
-                                <div class="row row-cols-auto px-3 py-2 ">
+                                <div class="row row-cols-auto px-3 py-1 ">
                                     <div class="col px-2" t-esc="str(index) + ' - '"></div>
                                     <div class="col-11 " t-esc="job_id.name"></div>
                                 </div>
@@ -84,11 +84,11 @@
                 </div>
 
                 <div class="footer py-2 border-2 border-top border-dark">
-                    <div class=" mt-3 mb-2 border border-danger" t-esc="o.name"
+                    <div class=" mt-3 mb-2" t-esc="o.name"
                          ></div>
                     <div class="mb-3" >Sing</div>
 
-                        <div class="w-25 mx-auto border border-info">
+                        <div class="w-25 mx-auto ">
                             <div class="row row-cols-auto  w-50 mx-auto ">
                                 <div class="col px-2 py-1 ">Page</div>
                                 <span class="page "/>
