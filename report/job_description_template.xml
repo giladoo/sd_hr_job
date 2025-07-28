@@ -34,7 +34,8 @@
                         <div class="row mb-2">
                             <div class="col-6 row mx-0 mb-2 p-0">
                                 <div class="col-4 ">Department:</div>
-                                <div t-if="o.department_id" class="col-8 " t-esc="o.department_id.name"></div>
+                                <div t-if="o.department_id" class="col-8 " style="font-size: .8rem;"
+                                     t-esc="o.department_id.name"></div>
                             </div>
                             <div class="col-6 row mx-0 p-0 ">
                                 <div class="col-4 ">Job Position:</div>
