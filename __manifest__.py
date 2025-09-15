@@ -11,12 +11,13 @@
     'installable': True,
     'auto_install': False,
     'application': False,
-    'depends': ['base', 'web', 'hr',],
+    'depends': ['base', 'web', 'hr', 'hr_contract'],
     'data': [
         'security/ir.model.access.csv',
         'report/job_description_template.xml',
         'report/job_description.xml',
         'views/hr_job_views.xml',
+        'views/hr_employee_views.xml',
         'views/views.xml',
     ],
     'assets':{

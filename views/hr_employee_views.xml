@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+       <record id="hr_view_employee_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr=".">
+<!--                <header>-->
+<!--            <xpath expr="//tree/header" position="inside">-->
+
+                    <button string="Job D" class="btn text-info" name="generate_and_download"
+                            context="{'model_name': 'hr.employee', 'variable_no': '1002', 'output_type': 'pdf', 'file_prefix': 'job_desc_', 'file_name': ['name']}"
+                            type="object"  icon="fa-file-pdf-o"/>
+<!--            </xpath>-->
+
+<!--            <xpath expr="//page[@name='skills_resume']" position="inside">-->
+<!--                </header>-->
+
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_contract_view_list_inherit_sd_hr_contracts" model="ir.ui.view">
+        <field name="name">hr_contract.hr_contract_view_list.view.list.inherit.sd_hr_contracts</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="." position="inside">
+<!--            <xpath expr="//tree" position="inside">-->
+                <header>
+                    <button string="Job D" class="btn text-info" name="generate_and_download"
+                            context="{'model_name': 'hr.employee', 'variable_no': '1002', 'output_type': 'pdf', 'file_prefix': 'job_desc_', 'file_name': ['name']}"
+                            type="object"  icon="fa-file-pdf-o"/>
+                </header>
+            </xpath>
+        </field>
+    </record>
+
+<!--    <record id="hr_contract_view_form_inherit_sd_hr_contracts" model="ir.ui.view">-->
+<!--        <field name="name">hr_contract.hr_contract_view_form.view.form.inherit.sd_hr_contracts</field>-->
+<!--        <field name="model">hr.contract</field>-->
+<!--        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <header>-->
+<!--                <button class="btn btn-outline-primary" name="generate_and_download_docx"-->
+<!--                        type="object" icon="fa-file-word-o">-->
+<!--                    Download 1 .docx-->
+<!--                </button>-->
+<!--            </header>-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>
