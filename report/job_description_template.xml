@@ -89,13 +89,13 @@
 <!--                    <div class="mb-3">Sing</div>-->
                     <div class="row mx-0 pt-2 pb-5 text-center border border-2 border-dark"
                          style="border-radius: 12px;">
-                        <div class="col-3 ">
+                        <div class="col-4 ">
                             <div class="mb-2">
                                 کارمند
                             </div>
                     <div class="" t-esc="o.name"></div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <div class="mb-2">
                                 تهیه کننده
                             </div>
@@ -103,15 +103,15 @@
                                 مدیر واحد
                             </div>
                         </div>
-                        <div class="col-3">
-                            <div class="mb-2">
-                                تایید کننده
-                            </div>
-                            <div class="">
-                                مدیر منابع انسانی
-                            </div>
-                        </div>
-                        <div class="col-3">
+<!--                        <div class="col-3">-->
+<!--                            <div class="mb-2">-->
+<!--                                تایید کننده-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                مدیر منابع انسانی-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="col-4">
                             <div class="mb-2">
                                 تصویب کننده
                             </div>
